@@ -1,23 +1,23 @@
-# Academic Homepage Template
+# 学术个人主页模板
 
-A clean, bilingual, Markdown-driven academic homepage template for GitHub Pages.
+[English](README.md) | 中文说明
 
-This template is designed for students, researchers, labs, and academic developers who want a lightweight personal homepage that is easy to edit and easy to publish. The page is pure static HTML/CSS/JavaScript, so there is no build step and no framework lock-in.
+这是一个简洁、美观，由 Markdown 驱动的 GitHub Pages 学术个人主页模板。
 
-Markdown is rendered in the browser with Marked.js from CDN. A lightweight built-in fallback supports common Markdown syntax if the CDN is unavailable.
+本模板适合学生、研究人员、实验室成员和学术开发者快速搭建个人主页。项目完全由静态 `HTML + CSS + JavaScript` 构成，不需要构建工具，也不绑定任何前端框架。你只需要修改 `content/` 目录里的 Markdown 文件和 `content/config.json`，就可以完成主页内容维护。
 
-## Features
+Markdown 默认通过 CDN 加载 Marked.js 在浏览器端渲染。如果 CDN 不可用，项目内置了一个轻量 fallback，可支持常见 Markdown 语法。
 
-- Markdown-first content editing
-- Bilingual section titles
-- Fixed profile sidebar
-- Responsive desktop/mobile layout
-- Built-in section types for timeline, research cards, publications, projects, honors, and contact
-- No build step required
-- GitHub Pages friendly
-- MIT licensed
+## 功能特性
 
-## Repository Structure
+- 内容优先使用 Markdown 维护
+- 左侧固定个人信息栏
+- 桌面端与移动端自适应布局
+- 内置时间线、研究方向卡片、论文列表、项目卡片、荣誉列表、联系方式等栏目类型
+- 无需构建步骤，直接部署到 GitHub Pages
+- MIT 开源协议
+
+## 目录结构
 
 ```text
 .
@@ -44,47 +44,47 @@ Markdown is rendered in the browser with Marked.js from CDN. A lightweight built
 └── README.md
 ```
 
-## Quick Start: Fork This Template
+## 快速开始：Fork 本模板
 
-### 1. Fork the repository
+### 1. Fork 仓库
 
-Click **Fork** on GitHub to create your own copy of this repository.
+在 GitHub 页面点击 **Fork**，将本模板复制到你自己的账号下。
 
-### 2. Rename the repository
+### 2. 重命名仓库
 
-For a personal GitHub Pages site, rename your fork to:
+如果你想创建个人 GitHub Pages 主页，请将 fork 后的仓库重命名为：
 
 ```text
-<your-github-username>.github.io
+<你的 GitHub 用户名>.github.io
 ```
 
-For example, if your GitHub username is `alice`, the repository should be:
+例如你的 GitHub 用户名是 `alice`，仓库名就应该是：
 
 ```text
 alice.github.io
 ```
 
-This gives you the homepage URL:
+这样你的主页地址就是：
 
 ```text
 https://alice.github.io/
 ```
 
-If you keep another repository name, GitHub Pages will publish it as a project site instead:
+如果你保留其他仓库名，GitHub Pages 会将它作为项目主页发布，地址通常是：
 
 ```text
-https://<your-github-username>.github.io/<repository-name>/
+https://<你的 GitHub 用户名>.github.io/<仓库名>/
 ```
 
-### 3. Edit your profile configuration
+### 3. 修改个人信息配置
 
-Open:
+打开：
 
 ```text
 content/config.json
 ```
 
-Update these fields:
+重点修改这些字段：
 
 ```json
 {
@@ -106,109 +106,89 @@ Update these fields:
 }
 ```
 
-You can also reorder, rename, add, or remove sections in the `sections` array.
+你也可以在 `sections` 数组里调整栏目顺序、栏目名称，或者添加/删除栏目。
 
-### 4. Edit Markdown content
+### 4. 修改 Markdown 内容
 
-Edit the Markdown files in `content/`:
+主要内容都在 `content/` 目录中：
 
 ```text
-content/about.md          homepage introduction
-content/news.md           timeline entries
-content/research.md       research cards
-content/publications.md   publication list
-content/projects.md       project cards
-content/honors.md         honors and achievements
-content/contact.md        contact information
+content/about.md          个人简介
+content/news.md           新闻动态 / 时间线
+content/research.md       研究方向卡片
+content/publications.md   论文列表
+content/projects.md       项目经历
+content/honors.md         荣誉奖项
+content/contact.md        联系方式
 ```
 
-For card-like sections such as research, publications, and projects, each `### Heading` starts a new card.
+对于研究方向、论文、项目这类卡片式栏目，每一个 `### 标题` 都会生成一个新的卡片。
 
-Example:
 
-```md
-### Multimodal Learning
+### 5. 替换头像
 
-Describe your research direction here.
-
-### Embodied AI
-
-Describe another research direction here.
-```
-
-For timeline sections, use:
-
-```md
-- **2026.05** | **[Publication]** One paper was accepted by Conference 2026.
-- **2025.09** | **[Education]** Joined University as a Ph.D. student.
-```
-
-### 5. Replace the avatar
-
-Replace:
+默认头像文件是：
 
 ```text
 static/assets/img/avatar.svg
 ```
 
-with your own avatar image. You may use `.png`, `.jpg`, `.jpeg`, `.webp`, or `.svg`.
+你可以替换成自己的头像，支持 `.png`、`.jpg`、`.jpeg`、`.webp`、`.svg` 等格式。
 
-If you change the filename, also update `profile.avatar` in `content/config.json`.
+如果你修改了文件名，请同步修改 `content/config.json` 中的：
 
-### 6. Enable GitHub Pages
-
-In your forked repository:
-
-1. Go to **Settings**
-2. Click **Pages**
-3. Under **Build and deployment**, set **Source** to `Deploy from a branch`
-4. Select branch `main`
-5. Select folder `/ (root)`
-6. Click **Save**
-
-GitHub Pages usually deploys within a few minutes.
-
-## Local Preview
-
-Because the site loads Markdown with `fetch()`, preview it through a local server instead of opening `index.html` directly.
-
-Run:
-
-```bash
-python -m http.server 8000 --bind 127.0.0.1
+```json
+"avatar": "static/assets/img/avatar.svg"
 ```
 
-Then open:
+### 6. 开启 GitHub Pages
+
+在你的仓库中：
+
+1. 进入 **Settings**
+2. 点击 **Pages**
+3. 在 **Build and deployment** 中，将 **Source** 设置为 `Deploy from a branch`
+4. Branch 选择 `main`
+5. Folder 选择 `/ (root)`
+6. 点击 **Save**
+
+GitHub Pages 通常会在几分钟内完成部署。
+
+## 栏目类型
+
+`content/config.json` 中的 `type` 字段控制每个 Markdown 文件如何渲染。
 
 ```text
-http://127.0.0.1:8000/
+hero          首页大简介区域
+timeline      带日期的新闻时间线
+research      研究方向卡片网格
+publications  论文列表
+projects      项目卡片列表
+honors        荣誉列表
+contact       联系方式卡片
+plain         普通 Markdown 卡片
 ```
 
-## Section Types
+## 删除或新增栏目
 
-The `type` field in `content/config.json` controls how each Markdown file is rendered.
+### 删除栏目
+
+打开：
 
 ```text
-hero          large intro section
-timeline      dated news timeline
-research      grid of research cards
-publications  publication list
-projects      vertical project cards
-honors        honors list
-contact       contact card
-plain         plain Markdown card
+content/config.json
 ```
 
-## Remove or Add a Section
+删除 `sections` 数组中对应的栏目配置即可。
 
-To remove a section, delete its entry from `content/config.json`.
+注意保持 JSON 逗号格式合法。
 
-To add a section:
+### 新增栏目
 
-1. Create a new Markdown file in `content/`
-2. Add a matching entry to the `sections` array in `content/config.json`
+1. 在 `content/` 中新建一个 Markdown 文件
+2. 在 `content/config.json` 的 `sections` 数组中添加对应配置
 
-Example:
+示例：
 
 ```json
 {
@@ -220,16 +200,44 @@ Example:
 }
 ```
 
-## Custom Design
+然后新建：
 
-Edit:
+```text
+content/teaching.md
+```
+
+并写入你的内容。
+
+## 自定义样式
+
+如果你想修改颜色、字体、间距、卡片样式、侧边栏宽度或响应式布局，请编辑：
 
 ```text
 static/css/main.css
 ```
 
-You can change colors, spacing, typography, sidebar width, card style, and responsive behavior.
+常用颜色变量在文件顶部：
 
-## License
+```css
+:root {
+  --bg: #f4f7fa;
+  --panel: #ffffff;
+  --text: #223040;
+  --muted: #647384;
+  --blue: #2b8fdc;
+}
+```
 
-This project is released under the MIT License.
+## 常见问题
+
+### 修改后 GitHub Pages 没有立刻变化怎么办？
+
+通常需要等待 1-5 分钟。如果另一个浏览器能看到新版本，而当前浏览器不能看到，多半是缓存问题。可以尝试：
+
+```text
+F12，点击 Network ，选中 Disable cache ，然后按 F5 进行刷新即可
+```
+
+## 开源协议
+
+本项目基于 MIT License 开源。

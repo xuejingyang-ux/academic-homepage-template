@@ -1,7 +1,5 @@
 # 学术个人主页模板
 
-[English](README.md) | 中文说明
-
 这是一个简洁、美观，由 Markdown 驱动的 GitHub Pages 学术个人主页模板。
 
 本模板适合学生、研究人员、实验室成员和学术开发者快速搭建个人主页。项目完全由静态 `HTML + CSS + JavaScript` 构成，不需要构建工具，也不绑定任何前端框架。你只需要修改 `content/` 目录里的 Markdown 文件和 `content/config.json`，就可以完成主页内容维护。

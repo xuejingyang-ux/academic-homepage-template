@@ -1,0 +1,4 @@
+- **2026.05** | **[Publication]** One paper was accepted by Conference 2026.
+- **2026.03** | **[Award]** Received an academic or research award.
+- **2025.12** | **[Project]** Started a new research project on your topic.
+- **2025.09** | **[Education]** Joined University or Organization as your role.

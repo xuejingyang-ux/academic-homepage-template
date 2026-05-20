@@ -1,0 +1,89 @@
+{
+  "site": {
+    "title": "Your Name | Academic Homepage",
+    "description": "A clean Markdown-driven academic homepage",
+    "author": "Your Name",
+    "language": "en"
+  },
+  "profile": {
+    "avatar": "static/assets/img/avatar.svg",
+    "name": "Your Name",
+    "nameLocal": "你的姓名",
+    "role": "Your Academic Role",
+    "affiliation": [
+      "Department or School",
+      "University or Organization"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/your-username",
+        "style": "primary"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:your-email@example.com",
+        "style": "secondary"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Research Area · Academic Field",
+    "title": "Your Name",
+    "titleLocal": "你的姓名",
+    "tagline": "A concise sentence about your research interests.",
+    "taglineLocal": "一句简洁的中文研究方向介绍。"
+  },
+  "sections": [
+    {
+      "id": "about",
+      "title": "About",
+      "subtitle": "简介",
+      "file": "content/about.md",
+      "type": "hero"
+    },
+    {
+      "id": "news",
+      "title": "News",
+      "subtitle": "动态",
+      "file": "content/news.md",
+      "type": "timeline"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "subtitle": "研究方向",
+      "file": "content/research.md",
+      "type": "research"
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "subtitle": "论文",
+      "file": "content/publications.md",
+      "type": "publications"
+    },
+    {
+      "id": "projects",
+      "title": "Projects",
+      "subtitle": "项目",
+      "file": "content/projects.md",
+      "type": "projects"
+    },
+    {
+      "id": "honors",
+      "title": "Honors",
+      "subtitle": "荣誉",
+      "file": "content/honors.md",
+      "type": "honors"
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "subtitle": "联系方式",
+      "file": "content/contact.md",
+      "type": "contact"
+    }
+  ],
+  "footer": "© {year} Your Name. Open sourced under the MIT License."
+}
